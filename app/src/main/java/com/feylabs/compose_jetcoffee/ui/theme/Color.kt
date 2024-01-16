@@ -2,6 +2,10 @@ package com.feylabs.compose_jetcoffee.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+
+val CoffeBrown = Color(0xFF886345)
+val LightCoffeBrown = Color(0xFFC4A68A)
+
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)
