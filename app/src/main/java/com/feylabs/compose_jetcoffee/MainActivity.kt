@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.feylabs.compose_jetcoffee.components.Banner
+import com.feylabs.compose_jetcoffee.components.CategoryRow
 import com.feylabs.compose_jetcoffee.ui.theme.ComposeJetcoffeeTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,6 +30,7 @@ class MainActivity : ComponentActivity() {
 fun JetCoffeeApp() {
     Column {
         Banner()
+        CategoryRow(modifier = Modifier)
     }
 }
 
