@@ -11,7 +11,7 @@ import com.feylabs.compose_jetcoffee.model.dummyCategory
 
 @Composable
 fun CategoryRow(modifier: Modifier = Modifier) {
-    LazyRow(modifier = Modifier, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+    LazyRow(modifier = modifier, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         items(dummyCategory, key = { it.textCategory }) { category ->
             CategoryItem(category = category)
         }
