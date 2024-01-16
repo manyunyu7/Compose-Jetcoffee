@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.feylabs.compose_jetcoffee"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.feylabs.compose_jetcoffee"
@@ -66,4 +66,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-}
+
+    //Material Design 3
+    implementation("androidx.compose.material3:material3:1.1.2")}
