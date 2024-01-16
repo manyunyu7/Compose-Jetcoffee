@@ -2,6 +2,7 @@ package com.feylabs.compose_jetcoffee.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -42,6 +43,12 @@ fun CategoryItem(
 
 @Preview()
 @Composable
-fun CategoryItemPreview(){
-    CategoryItem(category = Category(R.drawable.icon_category_americano, textCategory = R.string.category_americano))
+fun CategoryItemPreview() {
+    CategoryItem(
+        category = Category(
+            R.drawable.icon_category_americano,
+            textCategory = R.string.category_americano,
+        ),
+        modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
+    )
 }
