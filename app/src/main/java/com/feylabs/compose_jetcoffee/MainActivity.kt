@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,6 +18,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.feylabs.compose_jetcoffee.components.Banner
+import com.feylabs.compose_jetcoffee.components.BottomBar
 import com.feylabs.compose_jetcoffee.components.CategoryRow
 import com.feylabs.compose_jetcoffee.components.MenuCategoryRow
 import com.feylabs.compose_jetcoffee.components.SectionText
@@ -37,16 +39,26 @@ class MainActivity : ComponentActivity() {
 
 @Composable()
 fun JetCoffeeApp() {
-    Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-        Banner()
-        HomeSection(title = "Mau Ngopi Apa Hari Ini ?") {
-            CategoryRow(modifier = Modifier.padding(top = 20.dp))
+    Scaffold(
+        bottomBar = {
+            BottomBar(modifier = Modifier)
         }
-        HomeSection(title = stringResource(id = R.string.section_category)) {
-            MenuCategoryRow(listMenu = dummyMenu)
-        }
-        HomeSection(title = stringResource(id = R.string.section_best_seller_menu)) {
-            MenuCategoryRow(listMenu = dummyBestSellerMenu)
+    ) {
+        Column(
+            modifier = Modifier
+                .verticalScroll(rememberScrollState())
+                .padding(it),
+        ) {
+            Banner()
+            HomeSection(title = "Mau Ngopi Apa Hari Ini ?") {
+                CategoryRow(modifier = Modifier.padding(top = 20.dp))
+            }
+            HomeSection(title = stringResource(id = R.string.section_category)) {
+                MenuCategoryRow(listMenu = dummyMenu)
+            }
+            HomeSection(title = stringResource(id = R.string.section_best_seller_menu)) {
+                MenuCategoryRow(listMenu = dummyBestSellerMenu)
+            }
         }
     }
 }

@@ -4,7 +4,8 @@ import androidx.compose.ui.graphics.Color
 
 
 val CoffeBrown = Color(0xFF886345)
-val LightCoffeBrown = Color(0xFFC4A68A)
+val LightCoffeeBrown = Color(0xFFC4A68A)
+val LightGray = Color(0xFFBBBBBB)
 
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
